@@ -1,0 +1,42 @@
+update_readme.py
+scripts/update_readme.py
+*:Zone.Identifier
+# Rust build outputs
+target/
+
+# Rust analyzer / flycheck outputs if created separately
+**/target/
+
+# Optional editor/system files
+.vscode/
+.DS_Store
+Thumbs.db
+**/target/
+**/target/
+
+# Block Rust build artifacts
+target/
+
+# Block typical OS/IDE files
+.Cargo/
+.vscode/
+**/*.rs.bk
+
+# Ignore target directories in any subfolder
+**/target/
+
+# Ignore lock files if you don't want to track them across all small scripts
+# (Optional, but keeps things clean)
+**/*.rs.bk
+
+# Ignore flycheck files from IDE extensions
+**/flycheck*
+
+/Cargo.lock
+Cargo.lock
+
+doc.md
+/target/
+**/*.rs.bk
+
+**/target/

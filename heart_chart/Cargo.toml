@@ -1,0 +1,8 @@
+[package]
+name = "heart_chart"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+asciigraph-rs = "0.1.0"
+colored = "2"
