@@ -40,7 +40,15 @@ fn main() {
         ).help("Don't print newline")
     ).get_matches();
 
-    println!("{:#?}", matches);
+    let text:Vec<String> = matches.get_many("text").unwrap().cloned().collect();
+    let omit_newline = matches.get_flag("omit_newline");
+
+    // let mut ending = "\n";
+    // if omit_newline{
+    //     ending = "";
+    // }
+    println!("{}{}", text.join(" "), if omit_newline { "" } else { "\n" });
+    //println!("{:#?}", matches);
 
 }
 // std::env::args -> 
