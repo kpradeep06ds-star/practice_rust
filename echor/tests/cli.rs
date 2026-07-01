@@ -1,7 +1,8 @@
-use std::fs;
+use std::fs::{self, read_to_string};
 
 use assert_cmd::Command;
 use predicates::prelude::*;
+use anyhow::Result;
 
 #[test]
 fn dies_no_args(){
@@ -21,4 +22,13 @@ fn hello1(){
     let expected = fs::read_to_string(outfile).unwrap();
     let mut cmd = Command::cargo_bin("echor").unwrap();
     cmd.arg("Hello there").assert().success().stdout(expected);
+}
+
+#[test]
+fn hello2() -> Result<()> {
+    let expected = fs::read_to_string("tests/expected/hello2.txt")?;
+    let mut cmd = Command::cargo_bin("echor")?;
+    cmd.args(vec!["Hello", "there"]).assert().success().stdout(expected);
+
+    Ok(())
 }
