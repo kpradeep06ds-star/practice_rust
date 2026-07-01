@@ -1,9 +1,6 @@
 [package]
-name = "hello-world"
+name = "catr"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-
-[dev-dependencies]
-assert_cmd = "1"
