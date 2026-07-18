@@ -1,4 +1,4 @@
-use std::fs::{self, read_to_string};
+use std::fs::{self};
 
 use assert_cmd::Command;
 use predicates::prelude::*;
