@@ -16,8 +16,8 @@ fn add_alphabets(x:&str) -> i32 {
 }
 
 fn main() {
-   let x = "four" ;
-   let res = add_alphabets(x);
+   let x = "PRADEEPKUMAR" ;
+   let res = add_alphabets(&x.to_lowercase());
    println!("{:?}", res);
 }
 
