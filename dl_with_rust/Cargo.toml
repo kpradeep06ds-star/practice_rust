@@ -1,8 +1,0 @@
-[package]
-name = "dl_with_rust"
-version = "0.1.0"
-edition = "2024"
-
-[dependencies]
-ndarray = "0.17.2"
-linfa = "0.8.1"
